@@ -1,0 +1,51 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+}
+
+#start-screen button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #f1356d;
+    color: white;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 1rem; 
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#quiz {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
