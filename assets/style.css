@@ -13,9 +13,8 @@ body {
 #start-screen {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: absolute;
+    justify-content: center;
     height: 100vh;
 }
 
@@ -43,6 +42,14 @@ body {
 }
 
 #quiz {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#score {
     display: none;
     flex-direction: column;
     align-items: center;
