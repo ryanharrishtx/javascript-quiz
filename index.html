@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
     <title>JavaScript Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="start-screen">
-        <h1 class="title">JavaScript Quiz</h1>
-        <p class="description">This is a quiz to test your knowledge of JavaScript.<br/> Please press the "Start Quiz" button below to begin.</p>
-        <button id="start-button">Start Quiz</button>
+      <h1 class="title">JavaScript Quiz</h1>
+      <p class="description">
+        This is a quiz to test your knowledge of JavaScript.<br />
+        Please press the "Start Quiz" button below to begin.
+      </p>
+      <button id="start-button">Start Quiz</button>
     </div>
 
     <div id="quiz">
-        <div id="timer">60</div> 
-        <div id="question"></div>
-        <div id="answers"></div> 
+      <div id="timer">60</div>
+      <div id="question"></div>
+      <div id="answers"></div>
     </div>
 
     <div id="score">
-        <div class="user-score">
+      <div class="user-score">
         <h2>YOUR SCORE</h2>
         <p id="final-score"></p>
-    </div>
-    <div class="high-score-form">
+      </div>
+      <div class="high-score-form">
         <h2>HIGH SCORES</h2>
         <form id="initials-form">
-            <label for="initials">Enter your initials:</label>
-            <input type="text" id="initials" name="initials" maxlength="3" placeholder="AAA" required>
-            <button id="submit-score">Submit</button>
+          <label for="initials">Enter your initials:</label>
+          <input
+            type="text"
+            id="initials"
+            name="initials"
+            maxlength="3"
+            placeholder="AAA"
+            required
+          />
+          <button id="submit-score">Submit</button>
         </form>
+      </div>
     </div>
-    </div>
-    
-      
 
-<script src="assets/script.js"></script>
-</body>
+    <script src="assets/script.js"></script>
+  </body>
 </html>
