@@ -72,6 +72,12 @@ body {
     transform: translateY(1px);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
 .title {
     font-family: var(--title-font);
     font-size: 100%;
@@ -143,21 +149,45 @@ body {
 }
 
 #score {
-    font-family: var(--title-font);
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50vh;
     width: 50vw;
-    border-radius: 50px;
-    background: #d7da16;
-    box-shadow:  -20px 20px 60px #b7b913,
-                  20px -20px 60px #f7fb19;
     margin: auto;
     position: absolute;
     top: 25vh;
     left: 25vw;
     font-size: 100%;
     font-weight: bold;
+}
+
+.user-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-score h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.user-score p {
+    font-size: 30px;
+    text-align: center;
+    margin: -1rem;
+}
+
+.high-score-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.high-score-form h2{
+    font-size: 50px;
+    text-align: center;
 }

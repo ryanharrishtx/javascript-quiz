@@ -80,9 +80,15 @@ const Questions = [
   
   function loadScore() {
     const scoreDiv = document.getElementById("score");
+    const finalScore = document.getElementById("final-score");
     scoreDiv.style.display = "flex";
-    scoreMessage = `You scored ${score} out of ${Questions.length}`;
-    scoreDiv.innerHTML = scoreMessage;
+    scoreMessage = `${score} out of ${Questions.length}`;
+    finalScore.innerHTML = scoreMessage;
+  }
+
+  function highScore() {
+    const highScoreDiv = document.getElementById("high-score");
+    const highScore = document.getElementById("high-score");
   }
   
   function timer(seconds) {
@@ -92,7 +98,7 @@ const Questions = [
     timerInterval = setInterval(() => {
       timerDiv.innerText = counter;
       counter--;
-      if (counter <= 10) {
+      if (counter < 10) {
         document.getElementById("timer").style.color = "red";
       }
 
@@ -133,3 +139,18 @@ const Questions = [
     nextQuestion();
   }
   
+  let submitButton = document.getElementById("submit-score");
+  submitButton.addEventListener("click", function () {
+    const initials = document.getElementById("initials").value;
+    const scoreObj = {
+      initials: initials,
+      score: score,
+    };
+  
+    let highScores = localStorage.setItem("highScores", JSON.stringify) || [];
+    highScores.push(scoreObj);
+    JSON.parse(localStorage.getItem("highScores")
+    (highScores));
+  
+    window.location.href = "highscores.html";
+});
