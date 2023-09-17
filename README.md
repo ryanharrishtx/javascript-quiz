@@ -25,7 +25,7 @@ THEN I can save my initials and score
 ![screenshot of the score page](/assets/images/score.png)
 
 ## Link to Deployed Webpage
-<a href="https://ryanharrishtx.github.io/jacascript-quiz">Link</a>
+<a href="https://ryanharrishtx.github.io/javascript-quiz">Link</a>
 
 ## Credits
 ##### Neumorphism UI Design Style
