@@ -1,3 +1,4 @@
+// Quiz questions and answers
 const Questions = [
   {
     q: "Inside which HTML element do we put the JavaScript?",
@@ -45,27 +46,32 @@ const Questions = [
   },
 ];
 
+// Global variables
 let currentQuestion = 0;
 let score = 0;
 let seconds = 60;
 let initialTime = 60;
 let timerInterval;
 
+// Start button
 var startButton = document.getElementById("start-button");
 
+// Start button event listener - when clicked, the start screen is hidden and the quiz is displayed, and the timer starts
 startButton.addEventListener("click", function () {
   document.getElementById("start-screen").style.display = "none";
   document.getElementById("quiz").style.display = "flex";
   timer(seconds);
 });
 
+// Function to display the questions and answers
 function displayQuestion() {
   const question = document.getElementById("question");
   const quiz = document.getElementById("answers");
 
   question.innerHTML = Questions[currentQuestion].q;
-  answers.innerHTML = ""; // clears out previous answers
+  answers.innerHTML = ""; // Clear the answers div before displaying the next question
 
+  // Loop through the answers array and create a button for each answer
   for (let i = 0; i < Questions[currentQuestion].a.length; i++) {
     const answerButton = document.createElement("button");
     answerButton.textContent = Questions[currentQuestion].a[i].text;
@@ -75,22 +81,9 @@ function displayQuestion() {
     });
     quiz.appendChild(answerButton);
   }
-}
-displayQuestion();
+} displayQuestion();
 
-function loadScore() {
-  const scoreDiv = document.getElementById("score");
-  const finalScore = document.getElementById("final-score");
-  scoreDiv.style.display = "flex";
-  scoreMessage = `${score} out of ${Questions.length}`;
-  finalScore.innerHTML = scoreMessage;
-}
-
-function highScore() {
-  const highScoreDiv = document.getElementById("high-score");
-  const highScore = document.getElementById("high-score");
-}
-
+// Function to start the timer
 function timer(seconds) {
   const timerDiv = document.getElementById("timer");
   let counter = seconds;
@@ -110,13 +103,16 @@ function timer(seconds) {
   }, 1000);
 }
 
-function decrementTimer() {
-  seconds -= 5;
-  if (seconds < 0) {
-    seconds = 0;
-  }
+// Function to load the score screen
+function loadScore() {
+  const scoreDiv = document.getElementById("score");
+  const finalScore = document.getElementById("final-score");
+  scoreDiv.style.display = "flex";
+  scoreMessage = `${score} out of ${Questions.length}`;
+  finalScore.innerHTML = scoreMessage;
 }
 
+// Function to move to the next question
 function nextQuestion() {
   if (currentQuestion < Questions.length - 1) {
     currentQuestion++;
@@ -127,30 +123,14 @@ function nextQuestion() {
   }
 }
 
+// Function to check if the answer is correct
 function checkAnswer(selectedIndex) {
   if (Questions[currentQuestion].a[selectedIndex].isCorrect) {
     score++;
     console.log("Correct");
   } else {
     console.log("Incorrect");
-    decrementTimer(); // Decrement the timer by 5 seconds
+    seconds -= 5;
   }
-
   nextQuestion();
 }
-
-let submitButton = document.getElementById("submit-score");
-submitButton.addEventListener("click", function () {
-  const initials = document.getElementById("initials").value;
-  const scoreObj = {
-    initials: initials,
-    score: score,
-  };
-
-  let highScores = localStorage.setItem("highScores", JSON.stringify) || [];
-  highScores.push(scoreObj);
-  JSON.parse(localStorage.getItem("highScores")
-    (highScores));
-
-  window.location.href = "highscores.html";
-});

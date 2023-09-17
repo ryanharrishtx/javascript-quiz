@@ -1,3 +1,4 @@
+/* Setting variables */
 :root {
   --title-font: "Bebas Neue", sans-serif;
   --p-font: "Red Hat Display", sans-serif;
@@ -7,6 +8,7 @@ body {
   background: #e6e918;
 }
 
+/* Styling for page that shows onload */
 #start-screen {
   display: flex;
   flex-direction: column;
@@ -23,6 +25,7 @@ body {
   left: 25vw;
 }
 
+/* Start Quiz Button Styling */
 #start-screen button {
   font-family: var(--title-font);
   font-weight: bold;
@@ -42,33 +45,6 @@ body {
     0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.1);
   transform: translateY(1px);
-}
-
-#answers button {
-  font-family: var(--p-font);
-  font-weight: lighter;
-  margin: 1rem;
-  background: #d7da16;
-  padding: 1.4em;
-  border-radius: 10px;
-  box-shadow: -20px 20px 60px #b7b913, 20px -20px 60px #e6ea0b;
-  border: 1px solid rgba(0, 0, 0, 0);
-  cursor: pointer;
-  transition: transform 0.5s;
-}
-
-#answers button:hover {
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px #d7da16, -0.5px -0.5px 0px #d7da16,
-    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  transform: translateY(1px);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 }
 
 .title {
@@ -130,11 +106,24 @@ form {
 }
 
 #answers button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 1rem;
-  border-radius: 50px;
+  font-family: var(--p-font);
+  font-weight: lighter;
+  margin: 1rem;
   background: #d7da16;
-  box-shadow: -20px 20px 60px #b7b913, 20px -20px 60px #f7fb19;
+  padding: 1.4em;
+  border-radius: 10px;
+  box-shadow: -20px 20px 60px #b7b913, 20px -20px 60px #e6ea0b;
+  border: 1px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+#answers button:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px #d7da16, -0.5px -0.5px 0px #d7da16,
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
 }
 
 #score {
@@ -159,24 +148,14 @@ form {
 }
 
 .user-score h2 {
+  font-family: var(--title-font);
   font-size: 50px;
   text-align: center;
 }
 
 .user-score p {
+  font-family: var(--p-font);
   font-size: 30px;
   text-align: center;
   margin: -1rem;
-}
-
-.high-score-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
-}
-
-.high-score-form h2 {
-  font-size: 50px;
-  text-align: center;
 }
